@@ -1,0 +1,66 @@
+.affichage
+{
+	width: fit-content;
+	margin: auto;
+	padding: 20px;
+	color: black;
+}
+
+.commande
+{
+	margin: auto;
+	font-size: 1.2em;
+	width: fit-content;
+	color: black;
+}
+
+.texte
+{
+	display: block;
+	padding: 10px;
+	color: black;
+}
+
+.option_commande
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	color: black;
+}
+
+.option_commande h2
+{
+	font-size: 1.1em;
+	color: black;
+}
+
+table
+{
+	border-collapse: collapse;
+	border: 2px solid black;
+	color: black;
+}
+
+caption h3,b
+{
+	text-decoration: underline;
+	color: black;
+}
+
+th
+{
+	padding: 2px;
+	letter-spacing: 0.1px;
+	border: 2px solid black;
+	color: black;
+}
+
+td,tr
+{
+	padding: 1px;
+	letter-spacing: 0.1px;
+	border: 1px solid black;
+	color: black;
+}
