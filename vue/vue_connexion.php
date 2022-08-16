@@ -4,56 +4,90 @@
 	<meta charset="utf-8" http-equiv="refresh">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/connexion.css">
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 	<title>MBOA SHOP: Connexion</title>
 </head>
 <body>
 
-	<a href="index.php"><img src="image/home.png"></a>
+	<a href="index.php" class="retour">←</a>
 
 	<?php if (!empty($_GET['i']) && $_GET['i'] == "1") {	?>
 
-	<section>
-		<mark>Inscription</mark>
-		<img src="image/user.png">
+	<section class="container">
+		<span><h1>Create your Mboa account</h1></span>
+	
+		<span class="lop">Mboa Shop<sub>online site par excellence de E-commerce camerounais</sub></span>
 
 		<form method="post" action="index.php?un=connexion&i=1">
-			<label>Nom:</label><input type="text" name="nom" required>
-			<label>Prenom:</label><input type="text" name="prenom" required>
-			<label>Mail:</label><input type="mail" name="mail" required>
-			<label>Pseudo:</label><input type="text" name="pseudo" required>
-			<label>Telephone:</label><input type="number" name="tel" required>
-			<label>Mot de passe:</label><input type="password" name="pass" required>
-			<label>Rester connecter</label><input type="checkbox" name="choix">
-			<input type="submit" value="S'inscrire" class="liens" >
+			<div class="input-field">
+			<input type="text" name="nom" required placeholder="First Name">
+           </div>
+		   <div class="input-field">
+			<input type="text" name="prenom" required placeholder="Last Name">
+			</div>
+			<div class="input-field">
+			<input type="mail" name="mail" required placeholder="Email">
+			</div>
+			<div class="input-field">
+			<input type="text" name="pseudo" required placeholder="Username">
+			</div>
+			<div class="input-field">
+			<input type="password" class="password" name="pass" required placeholder="Password">
+			<i class="uil uil-eye"></i>
+			<i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+			<div class="checkbox-text">
+				<div class="checkbox-content">
+					<pre>
+		<input type="checkbox" name="choix"><label> I agree to the google Terms of Service and Privacy Policy</label>
+	               </pre>
+			</div>
+			</div>
+			<div class="input-field button">
+			<input type="button" value="Sign up" class="liens" >
+		</div>
 		</form>
+            <div class="login-signup">
+		<span>are you already a member?<a href="index.php?un=connexion"> Se connecter.</a></span>
+		</div>
 
-		<span>Vous possedez deja un compte?<a href="index.php?un=connexion">se connecter.</a></span>
 	</section>
  
 	<?php } 
 
 	elseif (!empty($_GET['m']) && $_GET['m'] == "1") {	?>
 
-	<section>
-		<mark>mot de passe oublier</mark>
-
+	<section class="container">
+		<span><h1>Forgot your password?</h1></span>
+		<pre>
+		<span class="lop">           Enter your email or phone number 
+			        and recever your account
+		</span>
+	</pre>
 		<form method="post" action="index.php?un=connexion">
-			<input type="hidden" name="mpo" value="ok" >
-			<label>Mail:</label><input type="mail" name="mail" required>
-			<p>OU</p>
-			<label>Telephone:</label><input type="text" name="tel" required> 
-			<a onclick="history.back()">Retour</a>
-			<input type="submit" value="Changer de mot de passe" class="liens" >
+		<div class="input-field">
+			<input type="mail" name="mail" required placeholder="Email">
+			</div>
+			<div class="li">
+			  <p>OR</p> 
+</div>
+			<div class="input-field">
+			<input type="text" name="tel" required placeholder="Phone Number">
+			</div>
+			<div class="input-field button">
+			<input type="button" value="Reset password" class="liens" >
+		</div>
+			
 		</form>
 
-		<span>Vous allez recevoir un email vous permettant de modifier votre mot de passe.</span>
+		
 	</section>	
 
 	<?php }
 
 	elseif (!empty($_GET['i']) && $_GET['i'] == "o") {   ?>
 		
-	<section>
+	<section class="container">
 		<mark>modifier le mot de passe</mark>
 		<img src="image/user.png">
 
@@ -72,22 +106,43 @@
 
 	 else{	?>
 
-	<section>
-		<mark>Connexion</mark>
-		<img src="image/user.png">
+	<section class="container">
+	<span><h1>Log in</h1></span>
+	
+	<span class="lop">Mboa Shop<sub>online site par excellence de E-commerce camerounais</sub></span>
 
 		<form method="post" action="index.php?un=connexion">
-			<label>Pseudo/Mail:</label><input type="text" name="pseudo" required>
-			<label>Mot de passe:</label><input type="password" name="pass" required>
-			<label>Rester connecter</label><input type="checkbox" name="choix">
-			<span>Mot de passe <a href="index.php?un=connexion&m=1">Oublier?</a></span>
-			<input type="submit" value="Ce Connecter" class="liens" >
+		<div class="input-field">
+			<input type="mail" name="mail" required placeholder="Email">
+	 </div>
+	 <div class="input-field">
+			<input type="password" class="password" name="pass" required placeholder="Password">
+			<i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+			<div class="checkbox-text">
+				<div class="checkbox-content">
+			<input type="checkbox" name="choix"><label> keep me signed in</label>
+			</div>
+			<span> <a href="index.php?un=connexion&m=1">Forgot password?</a></span>
+			</div>
+			
+			<div class="input-field button">
+			<div class="input-field button mo">
+			<input type="button" value="Facebook" class="liens" >
+			
+			<input type="button" value="Gmail" class="liens" >
+	 </div>
+			<input type="button" value="Sign in" class="liens" >
+		</div>
+			
 		</form>
-
-		<span>Vous ne possedez pas de compte?<a href="index.php?un=connexion&i=1">s'inscrire.</a></span>
+		<div class="login-signups">
+		<span>Not a member yet?<a href="index.php?un=connexion&i=1"><strong>   Sign up</strong></a></span>
+		</div>
+		
 	</section>
 
 	<?php } ?>
-
+<script src="js/paswrd.js"></script>
 </body>
 </html>

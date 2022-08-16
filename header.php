@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <header>
 	<div id="logo" >
-		<a href="index.php?un=accueil"><h1>MBOA SHOP Online</h1></a>
+		<a href="index.php?un=accueil"><h1>MBOA SHOP <sub>Online</sub></h1></a>
 	</div>
 	<ul class="nav_liste">
 		<a href="index.php?un=accueil"><li>Accueil</li></a>
