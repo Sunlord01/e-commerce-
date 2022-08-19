@@ -42,7 +42,7 @@
 		<form method="post" action="index.php?un=recherche">
 			<?php if (!empty($_SESSION['recherche'])) { $var = $_SESSION['recherche']; }else{ $var = NULL; }	 ?>
 			<input type="search" name="recherche" <?php echo'value="'.$var.'"' ?> id="recherche">
-			<input type="submit" value="search" id="re">
+			<input type="submit" value="write here for search anything" id="re">
 		</form>
 		<ul>
 			<div class="toogle"> </div>
